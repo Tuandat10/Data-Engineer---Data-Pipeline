@@ -1,0 +1,3372 @@
+[2024-10-29T02:46:34.060+0000] {processor.py:186} INFO - Started process (PID=166) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:46:34.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:46:34.072+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.070+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:46:34.259+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.259+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:46:34.261+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.260+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:46:34.263+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.262+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:46:34.368+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.368+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:46:34.370+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.369+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:46:34.371+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.370+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:46:34.477+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.476+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:46:34.482+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.481+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:46:34.496+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.495+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:46:34.498+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.497+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:46:34.500+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.500+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:46:34.502+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.501+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:46:34.606+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.606+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:46:34.607+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.607+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:46:34.709+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:34.709+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:46:37.425+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Peach - Fresh",
+                "price": 6.96,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 672,
+        "purchase_date": "01/15/2022"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Salt - Rock, Course",
+                "price": 2.08,
+                "quantity": 4
+            },
+            {
+                "name": "Tomato Paste",
+                "price": 9.52,
+                "quantity": 5
+            },
+            {
+                "name": "Sugar - Invert",
+                "price": 7.45,
+                "quantity": 3
+            },
+            {
+                "name": "Paper Towel Touchless",
+                "price": 18.15,
+                "quantity": 5
+            },
+            {
+                "name": "Salmon - Atlantic, No Skin",
+                "price": 5.97,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 204,
+        "purchase_date": "02/01/2023"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Bagel - Everything Presliced",
+                "price": 14.85,
+                "quantity": 4
+            },
+            {
+                "name": "Wine - Sawmill Creek Autumn",
+                "price": 17.58,
+                "quantity": 1
+            },
+            {
+                "name": "V8 Splash Strawberry Banana",
+                "price": 9.68,
+                "quantity": 3
+            },
+            {
+                "name": "Basil - Pesto Sauce",
+                "price": 19.12,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 736,
+        "purchase_date": "05/27/2022"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Chicken - Whole",
+                "price": 15.21,
+                "quantity": 3
+            },
+            {
+                "name": "Wine - Delicato Merlot",
+                "price": 17.91,
+                "quantity": 2
+            },
+            {
+                "name": "Syrup - Chocolate",
+                "price": 6.91,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 863,
+        "purchase_date": "08/18/2024"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Sugar - Invert",
+                "price": 17.52,
+                "quantity": 1
+            },
+            {
+                "name": "Crackers - Graham",
+                "price": 9.69,
+                "quantity": 3
+            },
+            {
+                "name": "7up Diet, 355 Ml",
+                "price": 12.94,
+                "quantity": 3
+            },
+            {
+                "name": "Nougat - Paste / Cream",
+                "price": 5.02,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 485,
+        "purchase_date": "09/15/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Chips - Potato Jalapeno",
+                "price": 11.73,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 76,
+        "purchase_date": "03/31/2021"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Tea - Darjeeling, Azzura",
+                "price": 12.81,
+                "quantity": 5
+            },
+            {
+                "name": "Appetizer - Escargot Puff",
+                "price": 1.78,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 362,
+        "purchase_date": "01/11/2023"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Skirt - 29 Foot",
+                "price": 6.54,
+                "quantity": 3
+            },
+            {
+                "name": "Beef - Salted",
+                "price": 9.35,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 983,
+        "purchase_date": "04/04/2024"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Extract - Raspberry",
+                "price": 10.44,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 14,
+        "purchase_date": "06/08/2024"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Napkin Colour",
+                "price": 12.39,
+                "quantity": 1
+            },
+            {
+                "name": "Lettuce - Lambs Mash",
+                "price": 17.24,
+                "quantity": 4
+            },
+            {
+                "name": "Veal - Eye Of Round",
+                "price": 1.11,
+                "quantity": 1
+            },
+            {
+                "name": "Red Snapper - Fillet, Skin On",
+                "price": 10.1,
+                "quantity": 4
+            },
+            {
+                "name": "Lamb - Loin Chops",
+                "price": 13.62,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 662,
+        "purchase_date": "11/24/2023"
+    }
+]
+[2024-10-29T02:46:37.428+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.428+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:46:37.429+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.429+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:46:37.432+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.431+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:46:37.537+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.537+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:46:37.538+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.538+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:46:37.549+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.549+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:46:37.550+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.550+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:46:37.551+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.551+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:46:37.594+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.593+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:46:37.597+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:37.597+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:46:37.695+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:46:38.246+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:38.244+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:run_pipeline
+[2024-10-29T02:46:38.274+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:38.274+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:run_pipeline
+[2024-10-29T02:46:38.292+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:38.292+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:run_pipeline
+[2024-10-29T02:46:38.293+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:38.293+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:46:38.328+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:38.327+0000] {dag.py:3234} INFO - Creating ORM DAG for run_pipeline
+[2024-10-29T02:46:38.348+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:46:38.347+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:46:37.600326+00:00, run_after=2024-10-30 02:46:37.600326+00:00
+[2024-10-29T02:46:38.391+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 4.343 seconds
+[2024-10-29T02:47:08.724+0000] {processor.py:186} INFO - Started process (PID=178) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:47:08.726+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:47:08.731+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.730+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:47:08.863+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.863+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:08.865+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.864+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:47:08.868+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.867+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:08.975+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.974+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:08.976+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.975+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:08.977+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:08.976+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:47:09.082+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.081+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:09.083+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.082+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:09.092+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.091+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:09.093+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.093+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:47:09.095+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.094+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:09.096+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.095+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:47:09.200+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.200+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:09.204+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:09.204+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:10.233+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "External Supplier",
+                "price": 11.61,
+                "quantity": 5
+            },
+            {
+                "name": "Mousse - Mango",
+                "price": 11.76,
+                "quantity": 1
+            },
+            {
+                "name": "Turkey - Breast, Bone - In",
+                "price": 14.81,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 329,
+        "purchase_date": "02/09/2021"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Cheese - Marble",
+                "price": 15.27,
+                "quantity": 2
+            },
+            {
+                "name": "Beans - Wax",
+                "price": 13.96,
+                "quantity": 2
+            },
+            {
+                "name": "Wine - Red, Mouton Cadet",
+                "price": 9.62,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 440,
+        "purchase_date": "02/24/2022"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Apron",
+                "price": 10.66,
+                "quantity": 1
+            },
+            {
+                "name": "Pail - 15l White, With Handle",
+                "price": 16.19,
+                "quantity": 1
+            },
+            {
+                "name": "Bananas",
+                "price": 1.73,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 969,
+        "purchase_date": "09/19/2023"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Beef - Diced",
+                "price": 2.08,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 700,
+        "purchase_date": "05/29/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Spinach - Frozen",
+                "price": 19.79,
+                "quantity": 1
+            },
+            {
+                "name": "Bagelers - Cinn / Brown",
+                "price": 3.38,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 407,
+        "purchase_date": "08/14/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Gelatine Powder",
+                "price": 17.71,
+                "quantity": 3
+            },
+            {
+                "name": "Mushroom - Lg - Cello",
+                "price": 8.15,
+                "quantity": 5
+            },
+            {
+                "name": "Chocolate - Pistoles, Lactee, Milk",
+                "price": 2.92,
+                "quantity": 5
+            },
+            {
+                "name": "Venison - Ground",
+                "price": 3.49,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 601,
+        "purchase_date": "08/23/2023"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Oven Mitts 17 Inch",
+                "price": 9.32,
+                "quantity": 5
+            },
+            {
+                "name": "Spinach - Frozen",
+                "price": 10.25,
+                "quantity": 1
+            },
+            {
+                "name": "Bread - Mini Hamburger Bun",
+                "price": 8.62,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 256,
+        "purchase_date": "01/04/2022"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Radish",
+                "price": 9.38,
+                "quantity": 4
+            },
+            {
+                "name": "Cheese - Gorgonzola",
+                "price": 18.99,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 764,
+        "purchase_date": "09/21/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Ecolab - Ster Bac",
+                "price": 6.35,
+                "quantity": 4
+            },
+            {
+                "name": "Onions - Vidalia",
+                "price": 11.74,
+                "quantity": 1
+            },
+            {
+                "name": "Beer - True North Strong Ale",
+                "price": 9.01,
+                "quantity": 5
+            },
+            {
+                "name": "Pepper - Chillies, Crushed",
+                "price": 7.17,
+                "quantity": 1
+            },
+            {
+                "name": "Carbonated Water - Wildberry",
+                "price": 19.78,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 851,
+        "purchase_date": "03/07/2021"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Pasta - Penne, Lisce, Dry",
+                "price": 9.18,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 809,
+        "purchase_date": "05/19/2024"
+    }
+]
+[2024-10-29T02:47:10.236+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.235+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:10.237+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.236+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:47:10.239+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.238+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:10.344+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.343+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:10.345+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.344+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:10.352+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.352+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:10.353+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.353+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:10.354+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.354+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:47:10.361+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.360+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:47:10.362+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.362+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:47:10.375+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:47:10.524+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.523+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:47:10.556+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:10.556+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:47:10.364141+00:00, run_after=2024-10-30 02:47:10.364141+00:00
+[2024-10-29T02:47:10.592+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 1.878 seconds
+[2024-10-29T02:47:40.774+0000] {processor.py:186} INFO - Started process (PID=191) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:47:40.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:47:40.805+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:40.805+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:47:40.986+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:40.986+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:40.987+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:40.987+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:47:40.989+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:40.988+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:41.094+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.094+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:41.096+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.095+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:41.097+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.097+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:47:41.202+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.201+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:41.203+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.203+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:41.212+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.212+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:41.214+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.213+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:47:41.216+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.215+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:41.217+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.216+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:47:41.322+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.322+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:41.325+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:41.324+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:42.389+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Nut - Peanut, Roasted",
+                "price": 7.64,
+                "quantity": 3
+            },
+            {
+                "name": "Quail Eggs - Canned",
+                "price": 5.01,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 228,
+        "purchase_date": "02/03/2022"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Beets - Mini Golden",
+                "price": 3.07,
+                "quantity": 4
+            },
+            {
+                "name": "Veal - Inside Round / Top, Lean",
+                "price": 10.42,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 905,
+        "purchase_date": "01/17/2023"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Flower - Daisies",
+                "price": 10.85,
+                "quantity": 5
+            },
+            {
+                "name": "Cranberries - Dry",
+                "price": 1.22,
+                "quantity": 1
+            },
+            {
+                "name": "Kale - Red",
+                "price": 10.88,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 848,
+        "purchase_date": "07/16/2023"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Cookies Almond Hazelnut",
+                "price": 12.65,
+                "quantity": 4
+            },
+            {
+                "name": "Beans - Butter Lrg Lima",
+                "price": 1.91,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 74,
+        "purchase_date": "02/12/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Fruit Mix - Light",
+                "price": 3.99,
+                "quantity": 1
+            },
+            {
+                "name": "Creamers - 10%",
+                "price": 17.92,
+                "quantity": 5
+            },
+            {
+                "name": "Beets - Mini Golden",
+                "price": 14.67,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 147,
+        "purchase_date": "12/23/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Apple - Delicious, Red",
+                "price": 10.78,
+                "quantity": 1
+            },
+            {
+                "name": "Beef - Shank",
+                "price": 11.58,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 199,
+        "purchase_date": "06/10/2024"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Bananas",
+                "price": 15.9,
+                "quantity": 5
+            },
+            {
+                "name": "Juice - Happy Planet",
+                "price": 10.27,
+                "quantity": 4
+            },
+            {
+                "name": "Parsley - Fresh",
+                "price": 14.95,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 368,
+        "purchase_date": "11/06/2021"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Sauce - Sesame Thai Dressing",
+                "price": 2.01,
+                "quantity": 4
+            },
+            {
+                "name": "Wine - Dubouef Macon - Villages",
+                "price": 12.48,
+                "quantity": 2
+            },
+            {
+                "name": "Rambutan",
+                "price": 17.81,
+                "quantity": 4
+            },
+            {
+                "name": "Cheese - Grana Padano",
+                "price": 8.95,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 941,
+        "purchase_date": "10/09/2023"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Rice - Wild",
+                "price": 13.32,
+                "quantity": 2
+            },
+            {
+                "name": "Otomegusa Dashi Konbu",
+                "price": 3.36,
+                "quantity": 1
+            },
+            {
+                "name": "Sugar - Brown",
+                "price": 6.23,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 88,
+        "purchase_date": "03/24/2021"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Fish - Atlantic Salmon, Cold",
+                "price": 11.36,
+                "quantity": 1
+            },
+            {
+                "name": "Water - Aquafina Vitamin",
+                "price": 15.35,
+                "quantity": 1
+            },
+            {
+                "name": "Salami - Genova",
+                "price": 17.47,
+                "quantity": 4
+            },
+            {
+                "name": "Mountain Dew",
+                "price": 6.66,
+                "quantity": 1
+            },
+            {
+                "name": "Appetiser - Bought",
+                "price": 15.27,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 385,
+        "purchase_date": "09/04/2021"
+    }
+]
+[2024-10-29T02:47:42.392+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.392+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:42.393+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.393+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:47:42.395+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.395+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:42.499+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.498+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:47:42.499+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.499+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:47:42.507+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.507+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:47:42.508+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.508+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:47:42.509+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.509+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:47:42.535+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.534+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:47:42.536+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.536+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:47:42.550+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:47:42.833+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.832+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:47:42.866+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:47:42.866+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:47:42.538428+00:00, run_after=2024-10-30 02:47:42.538428+00:00
+[2024-10-29T02:47:42.916+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 2.165 seconds
+[2024-10-29T02:48:13.298+0000] {processor.py:186} INFO - Started process (PID=203) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:48:13.301+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:48:13.306+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.304+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:48:13.417+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.417+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:13.418+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.418+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:48:13.422+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.422+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:13.527+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.526+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:13.528+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.527+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:13.529+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.529+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:48:13.634+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.633+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:13.635+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.635+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:13.645+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.644+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:13.646+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.645+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:48:13.648+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.647+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:13.649+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.648+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:48:13.753+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.753+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:13.755+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:13.755+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:14.895+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Basil - Dry, Rubbed",
+                "price": 7.64,
+                "quantity": 1
+            },
+            {
+                "name": "Lid - 3oz Med Rec",
+                "price": 6.69,
+                "quantity": 3
+            },
+            {
+                "name": "Nori Sea Weed - Gold Label",
+                "price": 19.7,
+                "quantity": 1
+            },
+            {
+                "name": "Bread - Pumpernickle, Rounds",
+                "price": 7.71,
+                "quantity": 5
+            },
+            {
+                "name": "Turkey - Whole, Fresh",
+                "price": 16.01,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 472,
+        "purchase_date": "10/05/2021"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Wine - Taylors Reserve",
+                "price": 10.32,
+                "quantity": 3
+            },
+            {
+                "name": "White Fish - Filets",
+                "price": 6.07,
+                "quantity": 5
+            },
+            {
+                "name": "Puree - Raspberry",
+                "price": 17.89,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 492,
+        "purchase_date": "01/03/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Fork - Plastic",
+                "price": 16.33,
+                "quantity": 3
+            },
+            {
+                "name": "Soho Lychee Liqueur",
+                "price": 1.55,
+                "quantity": 4
+            },
+            {
+                "name": "Appetizer - Sausage Rolls",
+                "price": 6.01,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 605,
+        "purchase_date": "01/19/2022"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Lamb - Leg, Diced",
+                "price": 14.52,
+                "quantity": 3
+            },
+            {
+                "name": "Wine - Red, Metus Rose",
+                "price": 1.49,
+                "quantity": 4
+            },
+            {
+                "name": "Wine - Vovray Sec Domaine Huet",
+                "price": 4.97,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 431,
+        "purchase_date": "05/09/2024"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Flower - Leather Leaf Fern",
+                "price": 15.12,
+                "quantity": 5
+            },
+            {
+                "name": "Pepper - Green, Chili",
+                "price": 16.54,
+                "quantity": 3
+            },
+            {
+                "name": "Lid - 3oz Med Rec",
+                "price": 8.48,
+                "quantity": 5
+            },
+            {
+                "name": "Sandwich Wrap",
+                "price": 6,
+                "quantity": 1
+            },
+            {
+                "name": "Wine - Chateau Bonnet",
+                "price": 2.66,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 408,
+        "purchase_date": "07/10/2022"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Sauce - Balsamic Viniagrette",
+                "price": 18.61,
+                "quantity": 3
+            },
+            {
+                "name": "Vinegar - Raspberry",
+                "price": 11.5,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 792,
+        "purchase_date": "10/21/2022"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Pork - Bacon, Double Smoked",
+                "price": 17.56,
+                "quantity": 4
+            },
+            {
+                "name": "Coffee - Flavoured",
+                "price": 16.42,
+                "quantity": 5
+            },
+            {
+                "name": "Cookie Chocolate Chip With",
+                "price": 15.98,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 341,
+        "purchase_date": "01/21/2022"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Mortadella",
+                "price": 8.38,
+                "quantity": 2
+            },
+            {
+                "name": "Long Island Ice Tea",
+                "price": 1.23,
+                "quantity": 1
+            },
+            {
+                "name": "Nantucket Orange Juice",
+                "price": 15.17,
+                "quantity": 1
+            },
+            {
+                "name": "Versatainer Nc - 888",
+                "price": 5.46,
+                "quantity": 2
+            },
+            {
+                "name": "Sauce Bbq Smokey",
+                "price": 9.14,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 339,
+        "purchase_date": "08/24/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Lettuce - Arugula",
+                "price": 1.03,
+                "quantity": 2
+            },
+            {
+                "name": "Arctic Char - Fresh, Whole",
+                "price": 15.24,
+                "quantity": 4
+            },
+            {
+                "name": "Pate - Peppercorn",
+                "price": 9.95,
+                "quantity": 2
+            },
+            {
+                "name": "Juice - Apple, 341 Ml",
+                "price": 6.74,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 509,
+        "purchase_date": "04/17/2023"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Gingerale - Diet - Schweppes",
+                "price": 1.18,
+                "quantity": 5
+            },
+            {
+                "name": "Kiwano",
+                "price": 17.65,
+                "quantity": 5
+            },
+            {
+                "name": "Sole - Fillet",
+                "price": 12.39,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 212,
+        "purchase_date": "05/31/2022"
+    }
+]
+[2024-10-29T02:48:14.950+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:14.949+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:14.952+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:14.951+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:48:14.953+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:14.953+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:15.058+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.057+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:15.059+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.058+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:15.068+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.068+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:15.069+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.069+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:15.070+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.070+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:48:15.078+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.078+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:48:15.079+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.079+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:48:15.102+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:48:15.289+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.289+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:48:15.332+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:15.332+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:48:15.083345+00:00, run_after=2024-10-30 02:48:15.083345+00:00
+[2024-10-29T02:48:15.385+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 2.108 seconds
+[2024-10-29T02:48:45.634+0000] {processor.py:186} INFO - Started process (PID=214) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:48:45.635+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:48:45.639+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.638+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:48:45.717+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.716+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:45.718+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.717+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:48:45.720+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.719+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:45.824+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.824+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:45.825+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.824+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:45.826+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.826+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:48:45.930+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.929+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:45.930+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.930+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:45.937+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.937+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:45.938+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.938+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:48:45.940+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.940+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:45.941+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:45.940+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:48:46.045+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:46.045+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:46.046+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:46.046+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:49.092+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Cheese - Ermite Bleu",
+                "price": 13.97,
+                "quantity": 5
+            },
+            {
+                "name": "Beans - Soya Bean",
+                "price": 12.5,
+                "quantity": 3
+            },
+            {
+                "name": "Phyllo Dough",
+                "price": 6.95,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 25,
+        "purchase_date": "07/07/2024"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Truffle Shells - White Chocolate",
+                "price": 18.2,
+                "quantity": 5
+            },
+            {
+                "name": "Tomatoes - Hot House",
+                "price": 3.58,
+                "quantity": 4
+            },
+            {
+                "name": "Kellogs All Bran Bars",
+                "price": 9.36,
+                "quantity": 2
+            },
+            {
+                "name": "Apples - Sliced / Wedge",
+                "price": 11.04,
+                "quantity": 2
+            },
+            {
+                "name": "Beef - Montreal Smoked Brisket",
+                "price": 4.18,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 563,
+        "purchase_date": "02/27/2024"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Liqueur - Melon",
+                "price": 13.4,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 784,
+        "purchase_date": "01/26/2021"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Veal - Shank, Pieces",
+                "price": 16,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 411,
+        "purchase_date": "02/19/2021"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Tandoori Curry Paste",
+                "price": 3.39,
+                "quantity": 4
+            },
+            {
+                "name": "Beef - Bones, Cut - Up",
+                "price": 17.77,
+                "quantity": 2
+            },
+            {
+                "name": "Potatoes - Mini White 3 Oz",
+                "price": 5.28,
+                "quantity": 5
+            },
+            {
+                "name": "Pastry - Baked Cinnamon Stick",
+                "price": 19.69,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 468,
+        "purchase_date": "09/17/2022"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Tart - Butter Plain Squares",
+                "price": 12.9,
+                "quantity": 1
+            },
+            {
+                "name": "Crab - Soft Shell",
+                "price": 10,
+                "quantity": 4
+            },
+            {
+                "name": "Soup Campbells Mexicali Tortilla",
+                "price": 14.97,
+                "quantity": 4
+            },
+            {
+                "name": "Kellogs All Bran Bars",
+                "price": 9.59,
+                "quantity": 2
+            },
+            {
+                "name": "Liquid Aminios Acid - Braggs",
+                "price": 15.95,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 427,
+        "purchase_date": "05/05/2021"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Fish - Base, Bouillion",
+                "price": 2.55,
+                "quantity": 3
+            },
+            {
+                "name": "Ecolab - Lime - A - Way 4/4 L",
+                "price": 15.58,
+                "quantity": 2
+            },
+            {
+                "name": "Gherkin",
+                "price": 9.03,
+                "quantity": 4
+            },
+            {
+                "name": "Coffee - Cafe Moreno",
+                "price": 7.23,
+                "quantity": 3
+            },
+            {
+                "name": "Chilli Paste, Sambal Oelek",
+                "price": 10.53,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 834,
+        "purchase_date": "11/12/2022"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Cake - Sheet Strawberry",
+                "price": 12.57,
+                "quantity": 1
+            },
+            {
+                "name": "Muffin Hinge - 211n",
+                "price": 15.46,
+                "quantity": 3
+            },
+            {
+                "name": "Vector Energy Bar",
+                "price": 4.43,
+                "quantity": 5
+            },
+            {
+                "name": "Spice - Paprika",
+                "price": 14.91,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 321,
+        "purchase_date": "06/24/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Food Colouring - Orange",
+                "price": 14.04,
+                "quantity": 1
+            },
+            {
+                "name": "Extract - Vanilla,artificial",
+                "price": 19.18,
+                "quantity": 3
+            },
+            {
+                "name": "Beans - Fine",
+                "price": 16.61,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 516,
+        "purchase_date": "06/16/2022"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Ham - Proscuitto",
+                "price": 12.43,
+                "quantity": 5
+            },
+            {
+                "name": "Danishes - Mini Cheese",
+                "price": 3.12,
+                "quantity": 5
+            },
+            {
+                "name": "Irish Cream - Butterscotch",
+                "price": 19.38,
+                "quantity": 1
+            },
+            {
+                "name": "Wine - Fino Tio Pepe Gonzalez",
+                "price": 17.77,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 560,
+        "purchase_date": "05/13/2024"
+    }
+]
+[2024-10-29T02:48:49.096+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.095+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:49.097+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.096+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:48:49.099+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.098+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:49.205+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.204+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:48:49.206+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.205+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:48:49.214+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.214+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:48:49.216+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.215+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:48:49.217+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.216+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:48:49.228+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.227+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:48:49.229+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.228+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:48:49.251+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:48:49.467+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.466+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:48:49.513+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:48:49.513+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:48:49.231375+00:00, run_after=2024-10-30 02:48:49.231375+00:00
+[2024-10-29T02:48:49.555+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 3.930 seconds
+[2024-10-29T02:49:19.958+0000] {processor.py:186} INFO - Started process (PID=233) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:49:19.960+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:49:19.963+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:19.963+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:49:20.038+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.037+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:49:20.039+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.038+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:49:20.041+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.040+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:49:20.145+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.145+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:49:20.146+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.146+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:49:20.147+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.147+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:49:20.251+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.251+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:49:20.252+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.252+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:49:20.258+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.258+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:49:20.259+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.259+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:49:20.261+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.261+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:49:20.262+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.261+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:49:20.366+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.366+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:49:20.367+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:20.367+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:49:49.976+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:49:49.975+0000] {timeout.py:68} ERROR - Process timed out, PID: 233
+[2024-10-29T02:50:20.527+0000] {processor.py:186} INFO - Started process (PID=250) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:50:20.528+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:50:20.532+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.531+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:50:20.615+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.615+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:20.617+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.616+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:20.619+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.618+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:20.723+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.722+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:20.724+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.723+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:20.725+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.725+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:20.830+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.829+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:20.831+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.830+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:20.836+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.836+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:20.837+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.837+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:50:20.838+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.838+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:20.839+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.839+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:50:20.944+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.943+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:20.945+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:20.944+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:22.055+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Soup - French Can Pea",
+                "price": 15.1,
+                "quantity": 1
+            },
+            {
+                "name": "Chocolate - Unsweetened",
+                "price": 15.72,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 935,
+        "purchase_date": "06/21/2024"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Cheese - Ricotta",
+                "price": 13.85,
+                "quantity": 3
+            },
+            {
+                "name": "Shrimp, Dried, Small / Lb",
+                "price": 13.86,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 929,
+        "purchase_date": "04/17/2022"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Gatorade - Lemon Lime",
+                "price": 8.24,
+                "quantity": 4
+            },
+            {
+                "name": "Bag - Bread, White, Plain",
+                "price": 14.32,
+                "quantity": 2
+            },
+            {
+                "name": "Puree - Pear",
+                "price": 11.64,
+                "quantity": 1
+            },
+            {
+                "name": "Chips - Miss Vickies",
+                "price": 18.24,
+                "quantity": 1
+            },
+            {
+                "name": "Fish - Scallops, Cold Smoked",
+                "price": 3.56,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 419,
+        "purchase_date": "03/01/2022"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Icecream Bar - Del Monte",
+                "price": 12.64,
+                "quantity": 4
+            },
+            {
+                "name": "Cheese - Grana Padano",
+                "price": 18.03,
+                "quantity": 5
+            },
+            {
+                "name": "Pasta - Lasagne, Fresh",
+                "price": 12.82,
+                "quantity": 1
+            },
+            {
+                "name": "Long Island Ice Tea",
+                "price": 11.4,
+                "quantity": 1
+            },
+            {
+                "name": "Puree - Raspberry",
+                "price": 12.96,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 810,
+        "purchase_date": "10/16/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Cheese - Bocconcini",
+                "price": 6.7,
+                "quantity": 2
+            },
+            {
+                "name": "Coffee - Flavoured",
+                "price": 1.02,
+                "quantity": 2
+            },
+            {
+                "name": "Pork - Chop, Frenched",
+                "price": 5.76,
+                "quantity": 1
+            },
+            {
+                "name": "7up Diet, 355 Ml",
+                "price": 2.04,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 510,
+        "purchase_date": "01/11/2021"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Cookie Dough - Chunky",
+                "price": 6.77,
+                "quantity": 1
+            },
+            {
+                "name": "Juice - Pineapple, 341 Ml",
+                "price": 9.52,
+                "quantity": 4
+            },
+            {
+                "name": "Cheese - Brie,danish",
+                "price": 19.78,
+                "quantity": 4
+            },
+            {
+                "name": "Cocktail Napkin Blue",
+                "price": 4.75,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 91,
+        "purchase_date": "03/06/2021"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Coffee - Ristretto Coffee Capsule",
+                "price": 10.39,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 69,
+        "purchase_date": "06/19/2023"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Butter - Salted",
+                "price": 15.17,
+                "quantity": 1
+            },
+            {
+                "name": "Energy Drink - Franks Pineapple",
+                "price": 17.79,
+                "quantity": 4
+            },
+            {
+                "name": "Calypso - Pineapple Passion",
+                "price": 16.28,
+                "quantity": 1
+            },
+            {
+                "name": "Muffin Carrot - Individual",
+                "price": 2.32,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 482,
+        "purchase_date": "01/21/2023"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Spinach - Baby",
+                "price": 11.26,
+                "quantity": 3
+            },
+            {
+                "name": "Beans - Turtle, Black, Dry",
+                "price": 3.4,
+                "quantity": 2
+            },
+            {
+                "name": "Flower - Dish Garden",
+                "price": 9.72,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 122,
+        "purchase_date": "07/09/2021"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Pepper - Red, Finger Hot",
+                "price": 10.37,
+                "quantity": 5
+            },
+            {
+                "name": "Lettuce - Curly Endive",
+                "price": 15.61,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 434,
+        "purchase_date": "05/20/2024"
+    }
+]
+[2024-10-29T02:50:22.058+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.058+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:22.060+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.059+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:22.062+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.062+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:22.167+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.166+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:22.168+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.167+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:22.178+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.177+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:22.179+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.178+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:22.180+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.179+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:50:22.189+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.188+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:50:22.190+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.190+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:50:22.214+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:50:22.372+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.371+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:50:22.433+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:22.433+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:50:22.192710+00:00, run_after=2024-10-30 02:50:22.192710+00:00
+[2024-10-29T02:50:22.481+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 1.963 seconds
+[2024-10-29T02:50:52.676+0000] {processor.py:186} INFO - Started process (PID=271) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:50:52.677+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:50:52.682+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:52.681+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:50:52.856+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:52.856+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:52.864+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:52.860+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:52.876+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:52.875+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:52.995+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:52.994+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:52.999+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:52.996+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:53.000+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.000+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:53.113+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.113+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:53.115+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.114+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:53.132+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.129+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:53.147+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.147+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:50:53.163+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.162+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:53.165+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.164+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:50:53.271+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.271+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:53.273+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:53.272+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:55.267+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Napkin - Cocktail,beige 2 - Ply",
+                "price": 7.43,
+                "quantity": 1
+            },
+            {
+                "name": "Dried Figs",
+                "price": 1.34,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 548,
+        "purchase_date": "02/20/2023"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Broccoli - Fresh",
+                "price": 11.38,
+                "quantity": 4
+            },
+            {
+                "name": "Beef - Tender Tips",
+                "price": 19.76,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 417,
+        "purchase_date": "12/15/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Lumpfish Black",
+                "price": 1.94,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 480,
+        "purchase_date": "10/04/2021"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Beef - Ox Tongue",
+                "price": 1.57,
+                "quantity": 2
+            },
+            {
+                "name": "Wine - Toasted Head",
+                "price": 15.97,
+                "quantity": 3
+            },
+            {
+                "name": "Pumpkin - Seed",
+                "price": 7.36,
+                "quantity": 4
+            },
+            {
+                "name": "Sunflower Seed Raw",
+                "price": 10.56,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 379,
+        "purchase_date": "11/25/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Southern Comfort",
+                "price": 5.05,
+                "quantity": 4
+            },
+            {
+                "name": "Chicken Giblets",
+                "price": 8.14,
+                "quantity": 1
+            },
+            {
+                "name": "Chicken - Leg, Fresh",
+                "price": 1.79,
+                "quantity": 1
+            },
+            {
+                "name": "Filo Dough",
+                "price": 1.96,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 932,
+        "purchase_date": "09/10/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Puree - Strawberry",
+                "price": 3.79,
+                "quantity": 3
+            },
+            {
+                "name": "Wine - White, Ej Gallo",
+                "price": 2.49,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 232,
+        "purchase_date": "03/08/2024"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Phyllo Dough",
+                "price": 2.12,
+                "quantity": 5
+            },
+            {
+                "name": "Pasta - Elbows, Macaroni, Dry",
+                "price": 15.79,
+                "quantity": 5
+            },
+            {
+                "name": "Wine - Sogrape Mateus Rose",
+                "price": 19.44,
+                "quantity": 1
+            },
+            {
+                "name": "Coffee Guatemala Dark",
+                "price": 1.12,
+                "quantity": 2
+            },
+            {
+                "name": "Heavy Duty Dust Pan",
+                "price": 5.82,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 43,
+        "purchase_date": "03/22/2022"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Apricots - Halves",
+                "price": 19.32,
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom - Shitake, Fresh",
+                "price": 12.44,
+                "quantity": 2
+            },
+            {
+                "name": "Lamb - Shanks",
+                "price": 7.07,
+                "quantity": 1
+            },
+            {
+                "name": "Pork - Bacon,back Peameal",
+                "price": 3.26,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 542,
+        "purchase_date": "04/02/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Cheese - Cheddar With Claret",
+                "price": 13.32,
+                "quantity": 5
+            },
+            {
+                "name": "Rabbit - Saddles",
+                "price": 1.76,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 72,
+        "purchase_date": "06/28/2022"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Absolut Citron",
+                "price": 19.44,
+                "quantity": 4
+            },
+            {
+                "name": "Dried Figs",
+                "price": 16.89,
+                "quantity": 3
+            },
+            {
+                "name": "Sardines",
+                "price": 3.38,
+                "quantity": 1
+            },
+            {
+                "name": "Blue Curacao - Marie Brizard",
+                "price": 7.23,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 632,
+        "purchase_date": "04/19/2021"
+    }
+]
+[2024-10-29T02:50:55.272+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.271+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:55.273+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.272+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:55.275+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.274+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:55.379+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.379+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:55.400+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.399+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:55.424+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.424+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:55.434+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.434+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:55.447+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.447+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:50:55.473+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.473+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:50:55.494+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.494+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:50:55.534+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:50:55.862+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.862+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:50:55.919+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:50:55.919+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:50:55.505680+00:00, run_after=2024-10-30 02:50:55.505680+00:00
+[2024-10-29T02:50:55.960+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 3.303 seconds
+[2024-10-29T02:51:26.692+0000] {processor.py:186} INFO - Started process (PID=283) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:51:26.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:51:26.709+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:26.708+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:51:26.947+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:26.947+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:51:26.948+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:26.948+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:51:26.951+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:26.950+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:51:27.056+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.055+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:51:27.058+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.057+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:51:27.061+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.060+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:51:27.166+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.165+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:51:27.167+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.166+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:51:27.174+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.174+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:51:27.176+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.175+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:51:27.177+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.177+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:51:27.179+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.178+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:51:27.283+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.283+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:51:27.284+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:27.284+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:51:32.064+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Nori Sea Weed",
+                "price": 11.91,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 198,
+        "purchase_date": "03/27/2023"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Cake - Sheet Strawberry",
+                "price": 15.49,
+                "quantity": 5
+            },
+            {
+                "name": "Munchies Honey Sweet Trail Mix",
+                "price": 3.66,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 637,
+        "purchase_date": "03/15/2024"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Chicken - Whole Roasting",
+                "price": 2.8,
+                "quantity": 5
+            },
+            {
+                "name": "Wine - Zinfandel California 2002",
+                "price": 1.09,
+                "quantity": 2
+            },
+            {
+                "name": "Beef - Flank Steak",
+                "price": 16.22,
+                "quantity": 2
+            },
+            {
+                "name": "Beans - Long, Chinese",
+                "price": 18.13,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 506,
+        "purchase_date": "08/04/2021"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Wine - Cabernet Sauvignon",
+                "price": 12.4,
+                "quantity": 2
+            },
+            {
+                "name": "Gatorade - Xfactor Berry",
+                "price": 11.82,
+                "quantity": 2
+            },
+            {
+                "name": "Beef - Bresaola",
+                "price": 10.8,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 285,
+        "purchase_date": "10/09/2021"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Pimento - Canned",
+                "price": 6.33,
+                "quantity": 2
+            },
+            {
+                "name": "Pants Custom Dry Clean",
+                "price": 7.14,
+                "quantity": 2
+            },
+            {
+                "name": "Chocolate - Sugar Free Semi Choc",
+                "price": 4.91,
+                "quantity": 5
+            },
+            {
+                "name": "Wine - Cahors Ac 2000, Clos",
+                "price": 14.05,
+                "quantity": 2
+            },
+            {
+                "name": "Towel Multifold",
+                "price": 4.14,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 613,
+        "purchase_date": "01/03/2021"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Water Chestnut - Canned",
+                "price": 5.86,
+                "quantity": 5
+            },
+            {
+                "name": "Napkin - Dinner, White",
+                "price": 16.28,
+                "quantity": 5
+            },
+            {
+                "name": "Sauce - Hollandaise",
+                "price": 19.13,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 566,
+        "purchase_date": "10/21/2021"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Wine - Mas Chicet Rose, Vintage",
+                "price": 8.4,
+                "quantity": 5
+            },
+            {
+                "name": "Heavy Duty Dust Pan",
+                "price": 17.44,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 335,
+        "purchase_date": "12/22/2023"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Vegetable - Base",
+                "price": 1.95,
+                "quantity": 4
+            },
+            {
+                "name": "Mustard - Dry, Powder",
+                "price": 1.72,
+                "quantity": 2
+            },
+            {
+                "name": "Bread - Italian Roll With Herbs",
+                "price": 11.75,
+                "quantity": 3
+            },
+            {
+                "name": "Muffin - Bran Ind Wrpd",
+                "price": 6.2,
+                "quantity": 5
+            },
+            {
+                "name": "Cup Translucent 9 Oz",
+                "price": 8.15,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 350,
+        "purchase_date": "11/29/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Beef - Striploin Aa",
+                "price": 4.89,
+                "quantity": 5
+            },
+            {
+                "name": "Calypso - Black Cherry Lemonade",
+                "price": 13.58,
+                "quantity": 4
+            },
+            {
+                "name": "Pepper - Paprika, Spanish",
+                "price": 9.99,
+                "quantity": 1
+            },
+            {
+                "name": "Bagel - Everything",
+                "price": 16.28,
+                "quantity": 3
+            },
+            {
+                "name": "Seaweed Green Sheets",
+                "price": 4.44,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 968,
+        "purchase_date": "02/28/2021"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Pasta - Elbows, Macaroni, Dry",
+                "price": 5.86,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 853,
+        "purchase_date": "05/04/2022"
+    }
+]
+[2024-10-29T02:51:32.068+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.067+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:51:32.069+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.069+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:51:32.071+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.071+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:51:32.177+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.176+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:51:32.178+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.177+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:51:32.193+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.192+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:51:32.194+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.193+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:51:32.196+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.195+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:51:32.225+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.224+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:51:32.229+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.228+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:51:32.263+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:51:32.707+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.707+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:51:32.789+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:51:32.788+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:51:32.243562+00:00, run_after=2024-10-30 02:51:32.243562+00:00
+[2024-10-29T02:51:32.862+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 6.209 seconds
+[2024-10-29T02:52:03.330+0000] {processor.py:186} INFO - Started process (PID=295) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:52:03.333+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:52:03.345+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.344+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:52:03.796+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.796+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:03.803+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.803+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:52:03.813+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.812+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:03.926+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.926+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:03.928+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.927+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:03.929+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:03.929+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:52:04.033+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.033+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:04.034+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.034+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:04.043+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.042+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:04.044+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.043+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:52:04.045+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.045+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:04.046+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.046+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:52:04.150+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.149+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:04.150+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:04.150+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:05.342+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Dill - Primerba, Paste",
+                "price": 15.37,
+                "quantity": 5
+            },
+            {
+                "name": "Veal - Loin",
+                "price": 17.16,
+                "quantity": 3
+            },
+            {
+                "name": "Flavouring Vanilla Artificial",
+                "price": 1,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 822,
+        "purchase_date": "10/10/2023"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Almonds Ground Blanched",
+                "price": 18.3,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 136,
+        "purchase_date": "07/18/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Bread - Frozen Basket Variety",
+                "price": 15.91,
+                "quantity": 1
+            },
+            {
+                "name": "Island Oasis - Strawberry",
+                "price": 6.69,
+                "quantity": 3
+            },
+            {
+                "name": "Nutmeg - Ground",
+                "price": 4.99,
+                "quantity": 1
+            },
+            {
+                "name": "Butcher Twine 4r",
+                "price": 7.83,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 517,
+        "purchase_date": "10/06/2022"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Beer - Blue Light",
+                "price": 9.27,
+                "quantity": 2
+            },
+            {
+                "name": "Juice Peach Nectar",
+                "price": 4.75,
+                "quantity": 3
+            },
+            {
+                "name": "Trout - Rainbow, Fresh",
+                "price": 10.59,
+                "quantity": 1
+            },
+            {
+                "name": "Parsley Italian - Fresh",
+                "price": 12.48,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 54,
+        "purchase_date": "01/20/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Crackers - Water",
+                "price": 15.91,
+                "quantity": 5
+            },
+            {
+                "name": "Bay Leaf Ground",
+                "price": 7.74,
+                "quantity": 1
+            },
+            {
+                "name": "Ranchero - Primerba, Paste",
+                "price": 2.95,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 897,
+        "purchase_date": "10/23/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Plasticforkblack",
+                "price": 4.59,
+                "quantity": 3
+            },
+            {
+                "name": "Bandage - Finger Cots",
+                "price": 7.16,
+                "quantity": 2
+            },
+            {
+                "name": "Beef Flat Iron Steak",
+                "price": 18.06,
+                "quantity": 4
+            },
+            {
+                "name": "Cup - Translucent 7 Oz Clear",
+                "price": 19.11,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 469,
+        "purchase_date": "11/25/2022"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "The Pop Shoppe Pinapple",
+                "price": 7.56,
+                "quantity": 4
+            },
+            {
+                "name": "Beans - Turtle, Black, Dry",
+                "price": 15.88,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 492,
+        "purchase_date": "12/20/2022"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Nut - Cashews, Whole, Raw",
+                "price": 2.66,
+                "quantity": 3
+            },
+            {
+                "name": "Pickle - Dill",
+                "price": 16.61,
+                "quantity": 4
+            },
+            {
+                "name": "Wine - Red, Gallo, Merlot",
+                "price": 5.75,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 185,
+        "purchase_date": "09/17/2021"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Tuna - Fresh",
+                "price": 14.71,
+                "quantity": 3
+            },
+            {
+                "name": "Veal - Shank, Pieces",
+                "price": 11.11,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 273,
+        "purchase_date": "02/11/2022"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Bread - 10 Grain",
+                "price": 18.82,
+                "quantity": 4
+            },
+            {
+                "name": "Tart Shells - Sweet, 4",
+                "price": 15.95,
+                "quantity": 1
+            },
+            {
+                "name": "Veal - Inside Round / Top, Lean",
+                "price": 16.42,
+                "quantity": 3
+            },
+            {
+                "name": "Yokaline",
+                "price": 11.3,
+                "quantity": 3
+            },
+            {
+                "name": "Salmon - Atlantic, No Skin",
+                "price": 5,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 980,
+        "purchase_date": "05/12/2022"
+    }
+]
+[2024-10-29T02:52:05.390+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.389+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:05.438+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.437+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:52:05.464+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.463+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:05.571+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.570+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:05.578+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.578+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:05.592+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.591+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:05.597+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.596+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:05.617+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.617+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:52:05.631+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.630+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:52:05.635+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:05.635+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:52:05.691+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:52:06.256+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:06.255+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:52:06.861+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:06.860+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:52:05.654883+00:00, run_after=2024-10-30 02:52:05.654883+00:00
+[2024-10-29T02:52:07.148+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 3.838 seconds
+[2024-10-29T02:52:37.665+0000] {processor.py:186} INFO - Started process (PID=307) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:52:37.668+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:52:37.673+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.672+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:52:37.822+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.822+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:37.823+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.823+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:52:37.826+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.825+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:37.931+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.930+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:37.933+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.932+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:37.935+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:37.935+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:52:38.040+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.040+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:38.042+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.042+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:38.052+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.052+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:38.056+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.055+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:52:38.058+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.058+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:38.060+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.059+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:52:38.164+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.164+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:38.165+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:38.165+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:39.253+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Octopus - Baby, Cleaned",
+                "price": 8.97,
+                "quantity": 3
+            },
+            {
+                "name": "Sauce - Sesame Thai Dressing",
+                "price": 16.12,
+                "quantity": 2
+            },
+            {
+                "name": "Mace Ground",
+                "price": 6.16,
+                "quantity": 5
+            },
+            {
+                "name": "Initation Crab Meat",
+                "price": 15.96,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 628,
+        "purchase_date": "01/13/2022"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Chicken - Soup Base",
+                "price": 17.07,
+                "quantity": 5
+            },
+            {
+                "name": "Oil - Coconut",
+                "price": 14.74,
+                "quantity": 3
+            },
+            {
+                "name": "Okra",
+                "price": 5.25,
+                "quantity": 4
+            },
+            {
+                "name": "Chocolate - Semi Sweet, Calets",
+                "price": 16.65,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 364,
+        "purchase_date": "04/16/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Rice - Brown",
+                "price": 15.41,
+                "quantity": 1
+            },
+            {
+                "name": "Wine - White, Gewurtzraminer",
+                "price": 18.44,
+                "quantity": 2
+            },
+            {
+                "name": "Cheese Cloth",
+                "price": 2.91,
+                "quantity": 5
+            },
+            {
+                "name": "Pastry - Banana Muffin - Mini",
+                "price": 15.28,
+                "quantity": 2
+            },
+            {
+                "name": "Basil - Fresh",
+                "price": 7.72,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 489,
+        "purchase_date": "03/30/2023"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Red Pepper Paste",
+                "price": 9.05,
+                "quantity": 2
+            },
+            {
+                "name": "Stock - Chicken, White",
+                "price": 17.96,
+                "quantity": 4
+            },
+            {
+                "name": "Sprite - 355 Ml",
+                "price": 8.47,
+                "quantity": 3
+            },
+            {
+                "name": "Pickle - Dill",
+                "price": 11.9,
+                "quantity": 2
+            },
+            {
+                "name": "Chickhen - Chicken Phyllo",
+                "price": 17.14,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 92,
+        "purchase_date": "01/31/2024"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Pesto - Primerba, Paste",
+                "price": 17.27,
+                "quantity": 1
+            },
+            {
+                "name": "Flour - Teff",
+                "price": 5.94,
+                "quantity": 1
+            },
+            {
+                "name": "Beef - Salted",
+                "price": 1.06,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 571,
+        "purchase_date": "03/10/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Horseradish Root",
+                "price": 6.18,
+                "quantity": 5
+            },
+            {
+                "name": "Wine - Merlot Vina Carmen",
+                "price": 2.09,
+                "quantity": 2
+            },
+            {
+                "name": "Wine - Rioja Campo Viejo",
+                "price": 17.62,
+                "quantity": 5
+            },
+            {
+                "name": "Puree - Passion Fruit",
+                "price": 4.16,
+                "quantity": 1
+            },
+            {
+                "name": "Bread - Rye",
+                "price": 3.74,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 333,
+        "purchase_date": "08/17/2023"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Bread - 10 Grain Parisian",
+                "price": 8.04,
+                "quantity": 2
+            },
+            {
+                "name": "Salsify, Organic",
+                "price": 10.48,
+                "quantity": 3
+            },
+            {
+                "name": "Olives - Black, Pitted",
+                "price": 4.64,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 299,
+        "purchase_date": "08/13/2023"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Duck - Fat",
+                "price": 15.43,
+                "quantity": 1
+            },
+            {
+                "name": "Chinese Foods - Pepper Beef",
+                "price": 13.62,
+                "quantity": 3
+            },
+            {
+                "name": "Beer - Rickards Red",
+                "price": 12.67,
+                "quantity": 3
+            },
+            {
+                "name": "Sprouts Dikon",
+                "price": 10.23,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 67,
+        "purchase_date": "11/17/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Pants Custom Dry Clean",
+                "price": 18.55,
+                "quantity": 5
+            },
+            {
+                "name": "Sauce - Vodka Blush",
+                "price": 5.84,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 607,
+        "purchase_date": "02/21/2022"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Lobster - Canned Premium",
+                "price": 16.31,
+                "quantity": 2
+            },
+            {
+                "name": "Vinegar - Rice",
+                "price": 18.24,
+                "quantity": 1
+            },
+            {
+                "name": "Muffin Mix - Carrot",
+                "price": 8.71,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 473,
+        "purchase_date": "03/31/2023"
+    }
+]
+[2024-10-29T02:52:39.257+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.257+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:39.259+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.259+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:52:39.263+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.263+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:39.376+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.376+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:52:39.378+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.377+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:52:39.404+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.403+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:52:39.410+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.409+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:52:39.412+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.412+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:52:39.423+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.422+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:52:39.424+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.424+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:52:39.446+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:52:39.746+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.745+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:52:39.818+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:52:39.815+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:52:39.427053+00:00, run_after=2024-10-30 02:52:39.427053+00:00
+[2024-10-29T02:52:39.874+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 2.224 seconds
+[2024-10-29T02:53:10.234+0000] {processor.py:186} INFO - Started process (PID=319) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:53:10.236+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:53:10.249+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.248+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:53:10.567+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.566+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:10.568+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.568+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:53:10.571+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.570+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:10.676+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.675+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:10.678+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.677+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:10.679+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.679+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:53:10.784+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.783+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:10.787+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.786+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:10.797+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.797+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:10.800+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.800+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:53:10.804+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.803+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:10.809+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.808+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:53:10.915+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.915+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:10.916+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:10.916+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:11.966+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Table Cloth 90x90 White",
+                "price": 18.81,
+                "quantity": 5
+            },
+            {
+                "name": "Broom And Brush Rack Black",
+                "price": 6.49,
+                "quantity": 2
+            },
+            {
+                "name": "Ketchup - Tomato",
+                "price": 12.56,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 969,
+        "purchase_date": "04/10/2021"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Bread - Rosemary Focaccia",
+                "price": 1.53,
+                "quantity": 3
+            },
+            {
+                "name": "Wine - Casillero Del Diablo",
+                "price": 14.54,
+                "quantity": 1
+            },
+            {
+                "name": "Beer - Sleeman Fine Porter",
+                "price": 3.89,
+                "quantity": 5
+            },
+            {
+                "name": "Tart Shells - Barquettes, Savory",
+                "price": 14.44,
+                "quantity": 1
+            },
+            {
+                "name": "Chicken Breast Halal",
+                "price": 8.1,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 995,
+        "purchase_date": "03/25/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Clams - Canned",
+                "price": 15.01,
+                "quantity": 5
+            },
+            {
+                "name": "Wine - Rhine Riesling Wolf Blass",
+                "price": 7.45,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 641,
+        "purchase_date": "11/13/2022"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Lid - 10,12,16 Oz",
+                "price": 14.77,
+                "quantity": 3
+            },
+            {
+                "name": "Wine - White, Pinot Grigio",
+                "price": 10.39,
+                "quantity": 1
+            },
+            {
+                "name": "Potatoes - Pei 10 Oz",
+                "price": 2.72,
+                "quantity": 1
+            },
+            {
+                "name": "Compound - Raspberry",
+                "price": 6.82,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 822,
+        "purchase_date": "05/23/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Chocolate - Semi Sweet, Calets",
+                "price": 8.17,
+                "quantity": 1
+            },
+            {
+                "name": "Veal - Leg",
+                "price": 18.06,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 375,
+        "purchase_date": "05/15/2024"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Cinnamon Rolls",
+                "price": 19.64,
+                "quantity": 4
+            },
+            {
+                "name": "Coffee Guatemala Dark",
+                "price": 3.85,
+                "quantity": 3
+            },
+            {
+                "name": "Fish - Artic Char, Cold Smoked",
+                "price": 2.12,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 775,
+        "purchase_date": "08/06/2024"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Cheese Cloth",
+                "price": 1.9,
+                "quantity": 3
+            },
+            {
+                "name": "Rum - Cream, Amarula",
+                "price": 15.56,
+                "quantity": 2
+            },
+            {
+                "name": "Sauce - Bernaise, Mix",
+                "price": 11.42,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 637,
+        "purchase_date": "04/29/2021"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Pie Pecan",
+                "price": 4.59,
+                "quantity": 1
+            },
+            {
+                "name": "Cabbage - Green",
+                "price": 19.71,
+                "quantity": 1
+            },
+            {
+                "name": "Energy Drink Red Bull",
+                "price": 3.59,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 840,
+        "purchase_date": "04/04/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Ham - Black Forest",
+                "price": 7.21,
+                "quantity": 5
+            },
+            {
+                "name": "Veal - Slab Bacon",
+                "price": 1.61,
+                "quantity": 4
+            },
+            {
+                "name": "Bread - Mini Hamburger Bun",
+                "price": 14.64,
+                "quantity": 3
+            },
+            {
+                "name": "Coffee - Decaffeinato Coffee",
+                "price": 3.4,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 811,
+        "purchase_date": "07/19/2024"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Bandage - Fexible 1x3",
+                "price": 4.16,
+                "quantity": 3
+            },
+            {
+                "name": "Bowl 12 Oz - Showcase 92012",
+                "price": 8.51,
+                "quantity": 3
+            },
+            {
+                "name": "Rabbit - Whole",
+                "price": 10.83,
+                "quantity": 2
+            },
+            {
+                "name": "Soup - Boston Clam Chowder",
+                "price": 17.47,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 876,
+        "purchase_date": "02/03/2023"
+    }
+]
+[2024-10-29T02:53:12.214+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.213+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:12.218+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.217+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:53:12.220+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.219+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:12.326+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.325+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:12.327+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.327+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:12.350+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.350+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:12.352+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.351+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:12.353+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.353+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:53:12.379+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.378+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:53:12.380+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:12.380+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:53:12.429+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:53:13.139+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:13.138+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:53:13.318+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:13.317+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:53:12.383359+00:00, run_after=2024-10-30 02:53:12.383359+00:00
+[2024-10-29T02:53:13.435+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 3.233 seconds
+[2024-10-29T02:53:43.840+0000] {processor.py:186} INFO - Started process (PID=331) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:53:43.844+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:53:43.849+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:43.848+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:53:43.969+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:43.969+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:43.970+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:43.970+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:53:43.972+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:43.972+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:44.077+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.076+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:44.088+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.087+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:44.102+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.101+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:53:44.208+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.208+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:44.211+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.210+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:44.224+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.224+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:44.230+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.229+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:53:44.235+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.234+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:44.236+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.236+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:53:44.343+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.343+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:44.345+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:44.345+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:45.572+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Peas - Pigeon, Dry",
+                "price": 8.85,
+                "quantity": 2
+            },
+            {
+                "name": "Filling - Mince Meat",
+                "price": 18.69,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 522,
+        "purchase_date": "11/02/2021"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Chocolate - Pistoles, Lactee, Milk",
+                "price": 8.86,
+                "quantity": 1
+            },
+            {
+                "name": "Sesame Seed Black",
+                "price": 14.09,
+                "quantity": 4
+            },
+            {
+                "name": "Numi - Assorted Teas",
+                "price": 9.4,
+                "quantity": 4
+            },
+            {
+                "name": "Yogurt - Raspberry, 175 Gr",
+                "price": 16.74,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 767,
+        "purchase_date": "06/24/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Muffins - Assorted",
+                "price": 14.85,
+                "quantity": 3
+            },
+            {
+                "name": "Turkey Tenderloin Frozen",
+                "price": 3.64,
+                "quantity": 5
+            },
+            {
+                "name": "Wine - White, French Cross",
+                "price": 8.78,
+                "quantity": 4
+            },
+            {
+                "name": "Juice - Clam, 46 Oz",
+                "price": 7.06,
+                "quantity": 5
+            },
+            {
+                "name": "Muffin Mix - Oatmeal",
+                "price": 15.44,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 816,
+        "purchase_date": "05/13/2024"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Gatorade - Fruit Punch",
+                "price": 17.75,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 516,
+        "purchase_date": "06/08/2021"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Lamb - Loin, Trimmed, Boneless",
+                "price": 14.88,
+                "quantity": 5
+            },
+            {
+                "name": "Tray - 16in Rnd Blk",
+                "price": 14.37,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 243,
+        "purchase_date": "06/23/2021"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Petit Baguette",
+                "price": 11.2,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 713,
+        "purchase_date": "10/01/2021"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Mussels - Frozen",
+                "price": 13.75,
+                "quantity": 4
+            },
+            {
+                "name": "Coffee - Ristretto Coffee Capsule",
+                "price": 11.54,
+                "quantity": 2
+            },
+            {
+                "name": "Tart Shells - Savory, 3",
+                "price": 2.78,
+                "quantity": 1
+            },
+            {
+                "name": "Zucchini - Yellow",
+                "price": 3.72,
+                "quantity": 1
+            },
+            {
+                "name": "Tart Shells - Sweet, 4",
+                "price": 10.6,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 1,
+        "purchase_date": "08/23/2024"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Wine - Piper Heidsieck Brut",
+                "price": 6.23,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 138,
+        "purchase_date": "10/17/2021"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Oil - Olive Bertolli",
+                "price": 4.22,
+                "quantity": 4
+            },
+            {
+                "name": "Pancetta",
+                "price": 8.24,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 780,
+        "purchase_date": "12/30/2023"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Mustard - Seed",
+                "price": 4.82,
+                "quantity": 5
+            },
+            {
+                "name": "Truffle Cups - Red",
+                "price": 3.38,
+                "quantity": 5
+            },
+            {
+                "name": "Pepper - Red, Finger Hot",
+                "price": 19.57,
+                "quantity": 1
+            },
+            {
+                "name": "Kiwi Gold Zespri",
+                "price": 17.43,
+                "quantity": 5
+            },
+            {
+                "name": "Bread - Bagels, Plain",
+                "price": 5.9,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 97,
+        "purchase_date": "05/24/2022"
+    }
+]
+[2024-10-29T02:53:45.583+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.583+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:45.585+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.585+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:53:45.587+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.587+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:45.694+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.694+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:53:45.968+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.967+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:53:45.994+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.993+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:53:46.000+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:45.999+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:53:46.002+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:46.002+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:53:46.012+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:46.011+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:53:46.014+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:46.013+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:53:46.040+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:53:46.281+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:46.280+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:53:46.352+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:53:46.352+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:53:46.017769+00:00, run_after=2024-10-30 02:53:46.017769+00:00
+[2024-10-29T02:53:46.408+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 2.591 seconds
+[2024-10-29T02:54:16.840+0000] {processor.py:186} INFO - Started process (PID=343) to work on /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:54:16.841+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/airflow_automation.py for tasks to queue
+[2024-10-29T02:54:16.845+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:16.844+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:54:16.954+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:16.954+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:54:16.955+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:16.955+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:54:16.957+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:16.957+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:54:17.062+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.061+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:54:17.147+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.143+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:54:17.150+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.149+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:54:17.257+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.256+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:54:17.257+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.257+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:54:17.262+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.262+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:54:17.263+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.263+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:54:17.265+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.264+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:54:17.265+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.265+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:54:17.369+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.368+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:54:17.369+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:17.369+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:54:18.451+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Cod - Salted, Boneless",
+                "price": 14.42,
+                "quantity": 5
+            },
+            {
+                "name": "Ecolab - Lime - A - Way 4/4 L",
+                "price": 5.53,
+                "quantity": 1
+            },
+            {
+                "name": "Okra",
+                "price": 13.16,
+                "quantity": 4
+            },
+            {
+                "name": "Cattail Hearts",
+                "price": 3.19,
+                "quantity": 2
+            },
+            {
+                "name": "Soup - Campbells, Chix Gumbo",
+                "price": 17.03,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 946,
+        "purchase_date": "12/20/2023"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Napkin White - Starched",
+                "price": 15.21,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 72,
+        "purchase_date": "04/26/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Veal - Shank, Pieces",
+                "price": 8.58,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 473,
+        "purchase_date": "09/06/2022"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Roe - Lump Fish, Red",
+                "price": 12.28,
+                "quantity": 4
+            },
+            {
+                "name": "Milk - Chocolate 250 Ml",
+                "price": 4.26,
+                "quantity": 3
+            },
+            {
+                "name": "Nestea - Ice Tea, Diet",
+                "price": 18.84,
+                "quantity": 3
+            },
+            {
+                "name": "Wine - Gewurztraminer Pierre",
+                "price": 12.42,
+                "quantity": 1
+            },
+            {
+                "name": "Lettuce - Treviso",
+                "price": 9.54,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 653,
+        "purchase_date": "11/10/2023"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Butter Balls Salted",
+                "price": 18.2,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 488,
+        "purchase_date": "05/13/2021"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Veal - Kidney",
+                "price": 13.91,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 37,
+        "purchase_date": "11/19/2022"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Dates",
+                "price": 11.35,
+                "quantity": 2
+            },
+            {
+                "name": "Cheese - Cambozola",
+                "price": 14.82,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 721,
+        "purchase_date": "12/22/2022"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Curry Paste - Green Masala",
+                "price": 7.75,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 938,
+        "purchase_date": "12/12/2022"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Napkin - Beverge, White 2 - Ply",
+                "price": 7.85,
+                "quantity": 1
+            },
+            {
+                "name": "Stock - Beef, Brown",
+                "price": 19.5,
+                "quantity": 1
+            },
+            {
+                "name": "Appetizer - Assorted Box",
+                "price": 2.89,
+                "quantity": 2
+            },
+            {
+                "name": "Squash - Guords",
+                "price": 19.23,
+                "quantity": 2
+            },
+            {
+                "name": "White Baguette",
+                "price": 19.52,
+                "quantity": 5
+            }
+        ],
+        "customer_id": 430,
+        "purchase_date": "07/09/2024"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Radish - Black, Winter, Organic",
+                "price": 16.54,
+                "quantity": 4
+            },
+            {
+                "name": "Lemonade - Kiwi, 591 Ml",
+                "price": 11.19,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 629,
+        "purchase_date": "03/25/2024"
+    }
+]
+[2024-10-29T02:54:18.454+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.454+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:54:18.455+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.455+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:54:18.456+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.456+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:54:18.560+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.559+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:54:18.560+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.560+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:54:18.569+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.568+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:54:18.570+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.570+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:54:18.571+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.571+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:54:18.577+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.576+0000] {kafka.py:483} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-10-29T02:54:18.578+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.578+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection.
+[2024-10-29T02:54:18.591+0000] {processor.py:925} INFO - DAG(s) 'run_pipeline' retrieved from /opt/airflow/dags/airflow_automation.py
+[2024-10-29T02:54:18.742+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.742+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-10-29T02:54:18.778+0000] {logging_mixin.py:190} INFO - [2024-10-29T02:54:18.777+0000] {dag.py:4138} INFO - Setting next_dagrun for run_pipeline to 2024-10-29 02:54:18.580350+00:00, run_after=2024-10-30 02:54:18.580350+00:00
+[2024-10-29T02:54:18.807+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/airflow_automation.py took 1.976 seconds

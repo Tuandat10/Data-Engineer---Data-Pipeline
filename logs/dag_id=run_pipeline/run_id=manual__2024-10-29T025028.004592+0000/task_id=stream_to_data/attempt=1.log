@@ -1,0 +1,252 @@
+[2024-10-29T02:50:33.011+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-29T02:50:33.065+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_pipeline.stream_to_data manual__2024-10-29T02:50:28.004592+00:00 [queued]>
+[2024-10-29T02:50:33.087+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_pipeline.stream_to_data manual__2024-10-29T02:50:28.004592+00:00 [queued]>
+[2024-10-29T02:50:33.089+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-10-29T02:50:33.135+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): stream_to_data> on 2024-10-29 02:50:28.004592+00:00
+[2024-10-29T02:50:33.144+0000] {standard_task_runner.py:72} INFO - Started process 258 to run task
+[2024-10-29T02:50:33.152+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'run_pipeline', 'stream_to_data', 'manual__2024-10-29T02:50:28.004592+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/***_automation.py', '--cfg-path', '/tmp/tmpl5rsj4r_']
+[2024-10-29T02:50:33.155+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask stream_to_data
+[2024-10-29T02:50:33.257+0000] {task_command.py:467} INFO - Running <TaskInstance: run_pipeline.stream_to_data manual__2024-10-29T02:50:28.004592+00:00 [running]> on host 912b6685d48b
+[2024-10-29T02:50:33.442+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_pipeline' AIRFLOW_CTX_TASK_ID='stream_to_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-29T02:50:28.004592+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-29T02:50:28.004592+00:00'
+[2024-10-29T02:50:33.448+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-29T02:50:33.529+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:33.532+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:33.535+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:33.639+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:33.640+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:33.641+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:33.744+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:33.747+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:33.753+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:33.755+0000] {conn.py:1205} INFO - Probing node 0 broker version
+[2024-10-29T02:50:33.757+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:33.758+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2024-10-29T02:50:33.862+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:33.864+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:35.667+0000] {logging_mixin.py:190} INFO - [
+    {
+        "transaction_id": 1,
+        "product": [
+            {
+                "name": "Tea - Orange Pekoe",
+                "price": 13.19,
+                "quantity": 1
+            },
+            {
+                "name": "Beef - Montreal Smoked Brisket",
+                "price": 19.17,
+                "quantity": 5
+            },
+            {
+                "name": "Pepper - Green, Chili",
+                "price": 2.44,
+                "quantity": 1
+            },
+            {
+                "name": "Lemonade - Mandarin, 591 Ml",
+                "price": 4.43,
+                "quantity": 2
+            },
+            {
+                "name": "Bread - Onion Focaccia",
+                "price": 17.28,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 182,
+        "purchase_date": "05/14/2023"
+    },
+    {
+        "transaction_id": 2,
+        "product": [
+            {
+                "name": "Wine - Prosecco Valdobienne",
+                "price": 13.9,
+                "quantity": 4
+            },
+            {
+                "name": "Rye Special Old",
+                "price": 5.44,
+                "quantity": 5
+            },
+            {
+                "name": "Pate - Peppercorn",
+                "price": 1.97,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 825,
+        "purchase_date": "02/01/2021"
+    },
+    {
+        "transaction_id": 3,
+        "product": [
+            {
+                "name": "Beef - Rib Roast, Cap On",
+                "price": 19.1,
+                "quantity": 4
+            },
+            {
+                "name": "Cup - Translucent 7 Oz Clear",
+                "price": 15.42,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 976,
+        "purchase_date": "05/16/2024"
+    },
+    {
+        "transaction_id": 4,
+        "product": [
+            {
+                "name": "Soup - Cream Of Broccoli, Dry",
+                "price": 16.44,
+                "quantity": 4
+            },
+            {
+                "name": "Shortbread - Cookie Crumbs",
+                "price": 10.93,
+                "quantity": 1
+            },
+            {
+                "name": "Pork - Suckling Pig",
+                "price": 2.89,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 862,
+        "purchase_date": "06/09/2021"
+    },
+    {
+        "transaction_id": 5,
+        "product": [
+            {
+                "name": "Capon - Whole",
+                "price": 9,
+                "quantity": 3
+            },
+            {
+                "name": "Sponge Cake Mix - Vanilla",
+                "price": 7.15,
+                "quantity": 4
+            },
+            {
+                "name": "Kaffir Lime Leaves",
+                "price": 15.38,
+                "quantity": 1
+            },
+            {
+                "name": "Wine - Fume Blanc Fetzer",
+                "price": 2.15,
+                "quantity": 5
+            },
+            {
+                "name": "Chocolate - Sugar Free Semi Choc",
+                "price": 15.08,
+                "quantity": 1
+            }
+        ],
+        "customer_id": 701,
+        "purchase_date": "10/06/2023"
+    },
+    {
+        "transaction_id": 6,
+        "product": [
+            {
+                "name": "Towel Multifold",
+                "price": 9.12,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 521,
+        "purchase_date": "09/09/2023"
+    },
+    {
+        "transaction_id": 7,
+        "product": [
+            {
+                "name": "Garlic - Elephant",
+                "price": 9.05,
+                "quantity": 5
+            },
+            {
+                "name": "Butter Sweet",
+                "price": 8.99,
+                "quantity": 3
+            },
+            {
+                "name": "Mushroom - Chantrelle, Fresh",
+                "price": 11.31,
+                "quantity": 4
+            },
+            {
+                "name": "The Pop Shoppe - Lime Rickey",
+                "price": 3.81,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 585,
+        "purchase_date": "07/11/2024"
+    },
+    {
+        "transaction_id": 8,
+        "product": [
+            {
+                "name": "Ice Cream - Super Sandwich",
+                "price": 3.75,
+                "quantity": 2
+            },
+            {
+                "name": "Bread - Italian Roll With Herbs",
+                "price": 11.94,
+                "quantity": 3
+            }
+        ],
+        "customer_id": 159,
+        "purchase_date": "03/06/2024"
+    },
+    {
+        "transaction_id": 9,
+        "product": [
+            {
+                "name": "Limes",
+                "price": 16.73,
+                "quantity": 2
+            },
+            {
+                "name": "Juice - V8 Splash",
+                "price": 19.93,
+                "quantity": 4
+            }
+        ],
+        "customer_id": 127,
+        "purchase_date": "12/19/2021"
+    },
+    {
+        "transaction_id": 10,
+        "product": [
+            {
+                "name": "Juice - Grapefruit, 341 Ml",
+                "price": 11.84,
+                "quantity": 2
+            }
+        ],
+        "customer_id": 758,
+        "purchase_date": "06/04/2024"
+    }
+]
+[2024-10-29T02:50:35.671+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:35.672+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-10-29T02:50:35.674+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:35.778+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-10-29T02:50:35.783+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-10-29T02:50:35.798+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2024-10-29T02:50:35.801+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2024-10-29T02:50:35.802+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2024-10-29T02:50:35.817+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2024-10-29T02:50:35.823+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-29T02:50:35.845+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-29T02:50:35.851+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=run_pipeline, task_id=stream_to_data, run_id=manual__2024-10-29T02:50:28.004592+00:00, execution_date=20241029T025028, start_date=20241029T025033, end_date=20241029T025035
+[2024-10-29T02:50:35.904+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-10-29T02:50:35.959+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-29T02:50:35.967+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
